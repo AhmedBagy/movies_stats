@@ -1,0 +1,12 @@
+create database movies
+use movies;
+
+-- use import "table data import wizard", as they are local files.
+
+-- naming part is long so, It's separated into file "naming".
+
+show tables;
+
+-- There are 6 tables with "RANK" column and 3 with "year". 
+-- I found a relation between those two clusters which is the "distributors" as shown:
+
