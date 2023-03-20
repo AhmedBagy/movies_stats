@@ -1,8 +1,34 @@
+-- rename table "annualticketsales" into "year" for table "annual"
 ALTER TABLE `movies`.`annualticketsales` 
-RENAME TO  `movies`.`annualticketsale` ;
+RENAME TO  `movies`.`annual` ;
 
+-- rename table "HighestGrossers" into "Grossers" for table "Grossers"
+ALTER TABLE `movies`.`HighestGrossers` 
+RENAME TO  `movies`.`Grossers` ;
 
+-- rename table "PopularCreativeTypes" into "year" for table "Creative"
+ALTER TABLE `movies`.`PopularCreativeTypes` 
+RENAME TO  `movies`.`Creative` ;
 
+-- rename table "TopDistributors" into "year" for table "Distr"
+ALTER TABLE `movies`.`TopDistributors` 
+RENAME TO  `movies`.`Distr` ;
+
+-- rename table "TopGrossingRatings" into "year" for table "Ratings"
+ALTER TABLE `movies`.`TopGrossingRatings` 
+RENAME TO  `movies`.`annual` ;
+
+-- rename table "TopProductionMethods" into "year" for table "Prod"
+ALTER TABLE `movies`.`Prod` 
+RENAME TO  `movies`.`annual` ;
+
+-- rename table "WideReleasesCount" into "year" for table "Releases"
+ALTER TABLE `movies`.`WideReleasesCount` 
+RENAME TO  `movies`.`Releases` ;
+
+-- rename table "TopGenres" into "year" for table "Genres"
+ALTER TABLE `movies`.`TopGenres` 
+RENAME TO  `movies`.`Genres` ;
 
 
 
