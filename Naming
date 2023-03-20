@@ -1,3 +1,7 @@
+==============================================================================================================
+rename tables, removing "ï»¿" to overcome naming difficulties 
+==============================================================================================================
+
 -- rename table "annualticketsales" into "year" for table "annual"
 ALTER TABLE `movies`.`annualticketsales` 
 RENAME TO  `movies`.`annual` ;
@@ -6,9 +10,9 @@ RENAME TO  `movies`.`annual` ;
 ALTER TABLE `movies`.`HighestGrossers` 
 RENAME TO  `movies`.`Grossers` ;
 
--- rename table "PopularCreativeTypes" into "year" for table "Creative"
+-- rename table "PopularCreativeTypes" into "year" for table "Types"
 ALTER TABLE `movies`.`PopularCreativeTypes` 
-RENAME TO  `movies`.`Creative` ;
+RENAME TO  `movies`.`Types` ;
 
 -- rename table "TopDistributors" into "year" for table "Distr"
 ALTER TABLE `movies`.`TopDistributors` 
@@ -16,11 +20,11 @@ RENAME TO  `movies`.`Distr` ;
 
 -- rename table "TopGrossingRatings" into "year" for table "Ratings"
 ALTER TABLE `movies`.`TopGrossingRatings` 
-RENAME TO  `movies`.`annual` ;
+RENAME TO  `movies`.`Ratings` ;
 
--- rename table "TopProductionMethods" into "year" for table "Prod"
-ALTER TABLE `movies`.`Prod` 
-RENAME TO  `movies`.`annual` ;
+-- rename table "TopProductionMethods" into "year" for table "Methods"
+ALTER TABLE `movies`.`TopProductionMethods` 
+RENAME TO  `movies`.`Methods` ;
 
 -- rename table "WideReleasesCount" into "year" for table "Releases"
 ALTER TABLE `movies`.`WideReleasesCount` 
@@ -30,40 +34,48 @@ RENAME TO  `movies`.`Releases` ;
 ALTER TABLE `movies`.`TopGenres` 
 RENAME TO  `movies`.`Genres` ;
 
+-- rename table "TopGrossingSources" into "year" for table "Sources"
+ALTER TABLE `movies`.`TopGrossingSources` 
+RENAME TO  `movies`.`Sources` ;
 
-
-
-
-
--- rename column "ï»¿YEAR" into "year" for table "annual"
-ALTER TABLE `movies`.`annual` 
-CHANGE COLUMN `ï»¿YEAR` `Year` INT NULL DEFAULT NULL ;
-
--- rename column "ï»¿YEAR" into "year" for table "annual"
-ALTER TABLE `movies`.`annual` 
-CHANGE COLUMN `ï»¿YEAR` `Year` INT NULL DEFAULT NULL ;
+**************************************************************************************************************
+==============================================================================================================
+rename column, removing "ï»¿" to overcome naming difficulties 
+==============================================================================================================
 
 -- rename column "ï»¿YEAR" into "year" for table "annual"
 ALTER TABLE `movies`.`annual` 
 CHANGE COLUMN `ï»¿YEAR` `Year` INT NULL DEFAULT NULL ;
 
--- rename column "ï»¿YEAR" into "year" for table "annual"
-ALTER TABLE `movies`.`annual` 
+-- rename column "ï»¿YEAR" into "year" for table "grossers"
+ALTER TABLE `movies`.`grossers` 
 CHANGE COLUMN `ï»¿YEAR` `Year` INT NULL DEFAULT NULL ;
 
--- rename column "ï»¿YEAR" into "year" for table "annual"
-ALTER TABLE `movies`.`annual` 
+-- rename column "ï»¿YEAR" into "year" for table "releases"
+ALTER TABLE `movies`.`releases` 
 CHANGE COLUMN `ï»¿YEAR` `Year` INT NULL DEFAULT NULL ;
 
--- rename column "ï»¿YEAR" into "year" for table "annual"
-ALTER TABLE `movies`.`annual` 
-CHANGE COLUMN `ï»¿YEAR` `Year` INT NULL DEFAULT NULL ;
+-- rename column "ï»¿RANK" into "RANK" for table "Distr"
+ALTER TABLE `movies`.`Distr` 
+CHANGE COLUMN `ï»¿RANK` `RANK` INT NULL DEFAULT NULL ;
 
--- rename column "ï»¿YEAR" into "year" for table "annual"
-ALTER TABLE `movies`.`annual` 
-CHANGE COLUMN `ï»¿YEAR` `Year` INT NULL DEFAULT NULL ;
+-- rename column "ï»¿RANK" into "RANK" for table "genres"
+ALTER TABLE `movies`.`genres` 
+CHANGE COLUMN `ï»¿RANK` `RANK` INT NULL DEFAULT NULL ;
 
-ALTER TABLE `movies`.`annual` 
-CHANGE COLUMN `ï»¿YEAR` `Year` INT NULL DEFAULT NULL ;
+-- rename column "ï»¿RANK" into "RANK" for table "methods"
+ALTER TABLE `movies`.`methods` 
+CHANGE COLUMN `ï»¿RANK` `RANK` INT NULL DEFAULT NULL ;
 
+-- rename column "ï»¿RANK" into "RANK" for table "ratings"
+ALTER TABLE `movies`.`ratings` 
+CHANGE COLUMN `ï»¿RANK` `RANK` INT NULL DEFAULT NULL ;
+
+-- rename column "ï»¿RANK" into "RANK" for table "sources"
+ALTER TABLE `movies`.`sources` 
+CHANGE COLUMN `ï»¿RANK` `RANK` INT NULL DEFAULT NULL ;
+
+-- rename column "ï»¿RANK" into "RANK" for table "types"
+ALTER TABLE `movies`.`types` 
+CHANGE COLUMN `ï»¿RANK` `RANK` INT NULL DEFAULT NULL ;
 
