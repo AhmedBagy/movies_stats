@@ -1,0 +1,43 @@
+ALTER TABLE `movies`.`annualticketsales` 
+RENAME TO  `movies`.`annualticketsale` ;
+
+
+
+
+
+
+
+
+
+-- rename column "ï»¿YEAR" into "year" for table "annual"
+ALTER TABLE `movies`.`annual` 
+CHANGE COLUMN `ï»¿YEAR` `Year` INT NULL DEFAULT NULL ;
+
+-- rename column "ï»¿YEAR" into "year" for table "annual"
+ALTER TABLE `movies`.`annual` 
+CHANGE COLUMN `ï»¿YEAR` `Year` INT NULL DEFAULT NULL ;
+
+-- rename column "ï»¿YEAR" into "year" for table "annual"
+ALTER TABLE `movies`.`annual` 
+CHANGE COLUMN `ï»¿YEAR` `Year` INT NULL DEFAULT NULL ;
+
+-- rename column "ï»¿YEAR" into "year" for table "annual"
+ALTER TABLE `movies`.`annual` 
+CHANGE COLUMN `ï»¿YEAR` `Year` INT NULL DEFAULT NULL ;
+
+-- rename column "ï»¿YEAR" into "year" for table "annual"
+ALTER TABLE `movies`.`annual` 
+CHANGE COLUMN `ï»¿YEAR` `Year` INT NULL DEFAULT NULL ;
+
+-- rename column "ï»¿YEAR" into "year" for table "annual"
+ALTER TABLE `movies`.`annual` 
+CHANGE COLUMN `ï»¿YEAR` `Year` INT NULL DEFAULT NULL ;
+
+-- rename column "ï»¿YEAR" into "year" for table "annual"
+ALTER TABLE `movies`.`annual` 
+CHANGE COLUMN `ï»¿YEAR` `Year` INT NULL DEFAULT NULL ;
+
+ALTER TABLE `movies`.`annual` 
+CHANGE COLUMN `ï»¿YEAR` `Year` INT NULL DEFAULT NULL ;
+
+
