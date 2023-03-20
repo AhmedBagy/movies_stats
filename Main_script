@@ -6,7 +6,32 @@ use movies;
 -- naming part is long so, It's separated into file "naming".
 
 show tables;
-
+start transaction;
 -- There are 6 tables with "RANK" column and 3 with "year". 
 -- I found a relation between those two clusters which is the "distributors" as shown:
+
+SELECT * from `movies`.`grossers`
+JOIN `movies`.`distr`  ON `distr`.`DISTRIBUTORS` = `grossers`.`DISTRIBUTOR`;
+
+-- Rank and year columns are now combined 
+-- save join results in new table "bestmovie"
+
+
+CREATE TABLE Movies (
+    id INT primary key ,    title VARCHAR(200),    release_year INT, genre VARCHAR(200) );
+    
+ALTER TABLE `movies`.`bestmovie` 
+CHANGE COLUMN `id` `year` INT NOT NULL ,
+CHANGE COLUMN `release_year` `rank` INT NULL DEFAULT NULL ,
+CHANGE COLUMN `title ` `movie` VARCHAR(200) NULL DEFAULT NULL ,
+CHANGE COLUMN `genre` `DISTRIBUTOR` VARCHAR(200) NULL DEFAULT NULL ;
+
+
+INSERT INTO `movies`.`bestmovie`
+
+
+SELECT grossers.year, distr.rank, grossers.movie, grossers.DISTRIBUTOR from `movies`.`grossers`
+JOIN `movies`.`distr`  ON `distr`.`DISTRIBUTORS` = `grossers`.`DISTRIBUTOR`
+
+order by distr.rank;
 
