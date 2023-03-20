@@ -15,7 +15,7 @@ JOIN `movies`.`distr`  ON `distr`.`DISTRIBUTORS` = `grossers`.`DISTRIBUTOR`;
 
 -- Rank and year columns are now combined 
 -- save join results in new table "bestmovie"
-
+-- I had a diffculty naming columns as "RANK" & "YEAR" So, I give them temp naming and renamed them again using alter table
 
 CREATE TABLE Movies (
     id INT primary key ,    title VARCHAR(200),    release_year INT, genre VARCHAR(200) );
